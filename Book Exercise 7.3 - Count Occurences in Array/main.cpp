@@ -12,7 +12,7 @@ using namespace std;
 
 int main() {
     
-    int const NUM_MAX_INPUTS = 3;
+    int const NUM_MAX_INPUTS = 10;
     int const NUM_COUNTABLE_DIGITS = 100;
     int input_array[NUM_MAX_INPUTS];
     int count_array[NUM_COUNTABLE_DIGITS];
@@ -34,16 +34,23 @@ int main() {
         cin >> integer_input;
         input_array[i] = static_cast<int>(integer_input);
         
+        if (input_array[i] > 0) {
+            cout << "TRUE > 0!" << endl;
+        } else if  (input_array[i] == 0) {
+            cout << "must be 0!" << endl;
+            break;
+        }
+        
     }
     
     cout << "what we got?: " << endl;
     
-    for (int j = 0; j < NUM_MAX_INPUTS ; j++) {
+    for (int i = 0; i < NUM_MAX_INPUTS ; i++) {
         
-        cout << "input array position " << j << " is " << input_array[j] << endl;
-        
-        
+        cout << "input array position " << i << " is " << input_array[i] << endl;
+
     }
+    
     
 
     return 0;
