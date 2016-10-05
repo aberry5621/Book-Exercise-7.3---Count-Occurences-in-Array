@@ -12,18 +12,28 @@ using namespace std;
 
 int main() {
     
-    int const NUM_INPUTS = 5;
+    int const NUM_MAX_INPUTS = 100;
+    int const NUM_COUNTABLE_DIGITS = 100;
     
-    cout << "Enter 3 numbers: ";
+    cout << "Enter integers between 1 and 100: ";
     
-    int input_array[NUM_INPUTS];
+    int input_array[NUM_MAX_INPUTS ];
+    int count_array[NUM_COUNTABLE_DIGITS];
     
-    for (int i = 0; i < NUM_INPUTS; i++) {
-        cin >> input_array[i];
+    for (int i = 0; i < NUM_MAX_INPUTS ; i++) {
+        int current_input_digit = 0;
+        cin >> current_input_digit;
+        if (isdigit(current_input_digit) && current_input_digit > 0) {
+            input_array[i] = current_input_digit;
+        } else {
+            break;
+        }
     }
     
-    for (int i = 0; i < NUM_INPUTS; i++) {
-        cout << "WTF " << input_array[i] << endl;
+    cout << "holy hell" << endl;
+    
+    for (int i = 0; i < NUM_MAX_INPUTS ; i++) {
+        cout << "input array now contains: " << input_array[i] << " in position " << i << endl;
     }
     
     return 0;
