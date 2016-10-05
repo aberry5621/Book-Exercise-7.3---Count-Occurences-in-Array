@@ -6,55 +6,45 @@
 //  Copyright © 2016 COMP130. All rights reserved.
 //
 
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
 int main() {
     
-    int const NUM_MAX_INPUTS = 100;
+    int const NUM_MAX_INPUTS = 3;
     int const NUM_COUNTABLE_DIGITS = 100;
+    int input_array[NUM_MAX_INPUTS];
+    int count_array[NUM_COUNTABLE_DIGITS];
+    int integer_input = 0;
     
+    // initialize array containers
+    for (int i = 0; i < NUM_MAX_INPUTS; i++) {
+        input_array[i] = 0;
+    }
     
-    
-    cout << "TEST Enter an integer: ";
-    
-    int test_input = 0;
-    
-    cin >> test_input;
-    
-    test_input = static_cast<int>(test_input);
-
-    cout << "TEST input is : " << test_input << endl;
-    bool is_a_digit = isdigit(test_input);
-    bool is_a_alpha = isalpha(test_input);
-    cout << "AND TEST input is a digit?: " << is_a_digit << endl;
-    cout << "AND TEST input is alpha?: " << is_a_alpha << endl;
-    
-    cout << "hold on ";
-    cout << "wait a minnit! " << endl;
-    
-    
+    for (int i = 0; i < NUM_COUNTABLE_DIGITS; i++) {
+        count_array[i] = 0;
+    }
     
     cout << "Enter integers between 1 and 100: ";
     
-    int input_array[NUM_MAX_INPUTS];
-    int count_array[NUM_COUNTABLE_DIGITS];
-    
     for (int i = 0; i < NUM_MAX_INPUTS ; i++) {
-        int current_input_digit = 2;
-        cin >> current_input_digit;
-        if (isdigit(current_input_digit) && current_input_digit > 0) {
-            input_array[i] = current_input_digit;
-        } else {
-            break;
-        }
-    }
-    
-    for (int i = 0; i < NUM_MAX_INPUTS ; i++) {
-        
-        cout << input_array[i] << endl;
 
+        cin >> integer_input;
+        input_array[i] = static_cast<int>(integer_input);
         
     }
+    
+    cout << "what we got?: " << endl;
+    
+    for (int j = 0; j < NUM_MAX_INPUTS ; j++) {
+        
+        cout << "input array position " << j << " is " << input_array[j] << endl;
+        
+        
+    }
+    
 
+    return 0;
+}
