@@ -6,10 +6,25 @@
 //  Copyright © 2016 COMP130. All rights reserved.
 //
 
-#include <iostream>
+#include<iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+
+int main() {
+    
+    int const NUM_INPUTS = 5;
+    
+    cout << "Enter 3 numbers: ";
+    
+    int input_array[NUM_INPUTS];
+    
+    for (int i = 0; i < NUM_INPUTS; i++) {
+        cin >> input_array[i];
+    }
+    
+    for (int i = 0; i < NUM_INPUTS; i++) {
+        cout << "WTF " << input_array[i] << endl;
+    }
+    
     return 0;
 }
