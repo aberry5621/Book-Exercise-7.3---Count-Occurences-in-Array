@@ -6,7 +6,7 @@
 //  Copyright © 2016 COMP130. All rights reserved.
 //
 
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -58,8 +58,3 @@ int main() {
         
     }
 
-    
-
-    
-    return 0;
-}
